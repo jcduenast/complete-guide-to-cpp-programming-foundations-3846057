@@ -8,6 +8,9 @@ int main(){
     int score = 1023;
     bool gamePaused = false;
     char action = 'x';
+
+    if (score > 1000)
+        std::cout << "" << std::endl;
     
     std::cout << std::endl << std::endl;
     return 0;

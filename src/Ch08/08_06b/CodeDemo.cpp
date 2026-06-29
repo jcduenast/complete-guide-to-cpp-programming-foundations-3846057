@@ -4,9 +4,11 @@
 
 #include <iostream>
 #include <queue>
+#include <stack>
 
 int main(){
     std::queue<std::string> eventQueue;  // FIFO container for game events
+    std::stack<std::string> undoStack; 
 
     // Adding events to the queue
     eventQueue.push("Move Forward");

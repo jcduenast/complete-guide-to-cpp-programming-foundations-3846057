@@ -4,13 +4,40 @@
 
 #include <iostream>
 
+// arguments by value
+int square(int x){
+    x = x*x;
+    return x;
+}
+
+// arguments by address pointer)
+void swap(int *x, int *y){
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+    return;
+}
+
+// arguments by reference
+void swap(int& x, int& y){
+    int temp = x;
+    x = y;
+    y = temp;
+    return;
+}
+
+
 int main(){
     int a = 9, b;
+    b = square(a);
+
     // TODO: square
     std::cout << "a = " << a << ", b = " << b << std::endl;
     // TODO: swap
+    swap(&a, &b);
     std::cout << "a = " << a << ", b = " << b << std::endl;
     // TODO: swap
+    swap(a, b);
     std::cout << "a = " << a << ", b = " << b << std::endl;
     
     std::cout << std::endl << std::endl;
